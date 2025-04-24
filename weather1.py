@@ -11,7 +11,7 @@ def get_weather(city):
     }
     
     try:
-        response = requests.get(base_url + city, params=params)
+        response = requests.get(f"http://wttr.in/{city}", params=params)
         response.raise_for_status()
         return response.text
 
